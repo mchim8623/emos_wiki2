@@ -132,3 +132,31 @@
 `PATCH` `/api/video/[video_id]/recover`
 
 - `video_id` 视频ID
+
+## 获取电视集列表
+
+`GET` `/api/video/[video_id]/episode`
+
+- `video_id` 视频ID
+
+`item_type` 均为 `ve`
+
+```json
+[
+    {
+        // 集 item_id
+        "episode_id": 53976,
+        "episode_title": "最喜欢你了",
+        // Exx E01
+        "episode_number": 1,
+        "season_id": 3810,
+        "season_title": "第 1 季",
+        // Sxx S01
+        "season_number": 1,
+        // 上映时间
+        "date_air": "2018-03-28",
+        // 资源总数
+        "medias_count": 1
+    },
+]
+```
