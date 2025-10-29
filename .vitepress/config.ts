@@ -69,6 +69,10 @@ export default defineConfig({
         link: '/news',
       },
       {
+        text: '反代',
+        link: '/proxy',
+      },
+      {
         text: 'api',
         collapsed: true,
         items: [
