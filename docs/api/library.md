@@ -160,3 +160,57 @@
     },
 ]
 ```
+
+## 获取视频的资源列表
+
+`GET` `/api/video/media/list?video_list_id=[video_list_id]&video_season_id=[video_season_id]&video_episode_id=[video_episode_id]`
+
+- `video_list_id` 视频ID
+- `video_season_id` 视频季ID
+- `video_episode_id` 视频集ID
+
+三个参数为合并查询关系 使用时必须传一个
+
+对于电影类型 传 `video_list_id`
+
+对于电视类型 传 `video_season_id` 或 `video_episode_id`
+
+```json
+[
+    // 电影返回
+    {
+        "media_uuid": "01997206-86e0-70e0-b396-96744256d527",
+        "media_name": "1080P",
+        "media_file_size": 1024,
+        "media_file_second": 60,
+        "season_id": null,
+        "season_name": null,
+        "season_number": null,
+        "episode_id": null,
+        "episode_name": null,
+        "episode_number": null,
+        // 是否为自己上传
+        "is_self_upload": true
+    },
+    // 电视返回
+    {
+        "media_uuid": "01997239-b91e-7324-b615-98625ac2f7ab",
+        "media_name": "2160P",
+        "media_file_size": 2048,
+        "media_file_second": 120,
+        "season_id": 1333,
+        "season_name": "第 1 季",
+        "season_number": 1,
+        "episode_id": 2333,
+        "episode_name": "第 1 集",
+        "episode_number": 1,
+        "is_self_upload": false
+    },
+]
+```
+
+## 删除视频的某项资源
+
+`DELETE` `/api/video/media/delete?media_uuid=[media_uuid]`
+
+- `media_uuid` 媒体资源ID 必传

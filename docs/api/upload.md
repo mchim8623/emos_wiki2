@@ -126,7 +126,9 @@ fetch(upload_url, {
     // 总上传的数量
     "count": 2,
     // 获得的胡萝卜数量
-    "radish": 0
+    "radish": 0,
+    // 视频资源UUID 删除或获取详情时用
+    "media_uuid": "01997239-b91e-7324-b615-98625ac2f7ab"
 }
 ```
 
