@@ -17,3 +17,4 @@
 - <https://nomaba.com>
 - <https://micu.hk>
 - <https://emby.wiki>
+- <https://wiki.lyrebirdemby.com>
