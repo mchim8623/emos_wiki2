@@ -19,7 +19,9 @@
     // 文件名称
     "file_name": "demo.mp4",
     // 文件大小 字节
-    "file_size": 250817
+    "file_size": 250817,
+    // 储存位置 global 国际 internal 国内 default 默认
+    "file_storage": "default"
 }
 ```
 
