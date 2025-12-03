@@ -214,3 +214,11 @@
 `DELETE` `/api/video/media/delete?media_uuid=[media_uuid]`
 
 - `media_uuid` 媒体资源ID 必传
+
+## 移动视频的某项资源
+
+`PUT` `/api/video/media/move?media_uuid=[media_uuid]&item_type=[item_type]&item_id=[item_id]`
+
+- `media_uuid` 媒体资源ID 必传
+- `item_type` 资源类型 必传
+- `item_id` 资源ID 必传
