@@ -225,5 +225,5 @@
 `PUT` `/api/video/media/move?media_uuid=[media_uuid]&item_type=[item_type]&item_id=[item_id]`
 
 - `media_uuid` 媒体资源UUID 必传
-- `item_type` 资源类型 必传
-- `item_id` 资源ID 必传
+- `item_type` 目标资源类型 必传
+- `item_id` 目标资源ID 必传
