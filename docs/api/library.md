@@ -163,7 +163,8 @@
 
 ## 获取视频的资源列表
 
-`GET` `/api/video/media/list?video_list_id=[video_list_id]&video_season_id=[video_season_id]&video_episode_id=[video_episode_id]`
+`GET`
+`/api/video/media/list?video_list_id=[video_list_id]&video_season_id=[video_season_id]&video_episode_id=[video_episode_id]`
 
 - `video_list_id` 视频ID
 - `video_season_id` 视频季ID
@@ -209,16 +210,20 @@
 ]
 ```
 
-## 删除视频的某项资源
+## 删除视频的媒体资源
+
+删除视频下面的某项媒体资源
 
 `DELETE` `/api/video/media/delete?media_uuid=[media_uuid]`
 
-- `media_uuid` 媒体资源ID 必传
+- `media_uuid` 媒体资源UUID 必传
 
-## 移动视频的某项资源
+## 移动视频的媒体资源
+
+将视频媒体资源移动到另一个视频下面
 
 `PUT` `/api/video/media/move?media_uuid=[media_uuid]&item_type=[item_type]&item_id=[item_id]`
 
-- `media_uuid` 媒体资源ID 必传
+- `media_uuid` 媒体资源UUID 必传
 - `item_type` 资源类型 必传
 - `item_id` 资源ID 必传

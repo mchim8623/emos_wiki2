@@ -1,4 +1,6 @@
-# 获取视频ItemId
+# 获取视频 ItemId
+
+> 获取vl或ve开头的ID
 
 - 需 带入 `authorization` 头部
 
@@ -51,7 +53,7 @@
                         // Exx E01
                         "episode_number": 1,
                         "date_air": "2025-10-08",
-                        // 有资源时
+                        // 有媒体资源时
                         "medias": [
                             {
                                 "item_id": 4,
@@ -78,7 +80,7 @@
                         "episode_title": "含风君再度送人未果",
                         "episode_number": 2,
                         "date_air": "2025-10-08",
-                        // 无资源时
+                        // 无媒体资源时
                         "medias": [
 
                         ]

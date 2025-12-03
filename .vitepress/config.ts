@@ -93,7 +93,7 @@ export default defineConfig({
             link: '/api/upload',
           },
           {
-            text: '获取视频ItemId',
+            text: '获取视频 ItemId',
             link: '/api/get_video_item_id',
           },
           {
