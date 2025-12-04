@@ -100,6 +100,10 @@ export default defineConfig({
             text: '媒体库',
             link: '/api/library',
           },
+          {
+            text: '插件类',
+            link: '/api/plug',
+          },
         ],
       },
     ],
