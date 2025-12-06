@@ -73,6 +73,10 @@ export default defineConfig({
         link: '/proxy',
       },
       {
+        text: '教程',
+        link: '/help',
+      },
+      {
         text: 'api',
         collapsed: true,
         items: [
