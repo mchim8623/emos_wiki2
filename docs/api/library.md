@@ -90,6 +90,8 @@
             "media_count": 12,
             // 点播总数
             "request_count": 1,
+            // 别名总数
+            "title_alias_count": 1,
             // 是否已删除
             "is_delete": true
         },
@@ -106,8 +108,9 @@
             "video_description": "电影改编自比利时漫画家埃尔热（Hergé）笔下风靡全球多年的同名作品《丁丁历险记》。故事跟随着一个充满好奇心的年轻记者丁丁（杰米贝尔 饰）和他忠心无比的狗狗白雪，他们发现一艘藏有惊爆秘密的模型船，于是丁丁受到这个流传几世纪的秘密吸引，并引起残暴恶棍萨卡林（丹尼尔克雷格 饰）的注意，因为萨卡林相信丁丁偷了跟红色拉克姆有关的无价宝藏，不过由于狗狗白雪、坏脾气的航海家阿道克船长（安迪瑟金斯 饰）及笨手笨脚的侦探搭挡杜庞与杜邦（赛门佩吉和尼克弗斯特 饰）的帮助，丁丁将会游历半个地球，智取并赶过他的敌人，热切地寻找船舰独角兽号的最后落脚处，因为那正关键着一艘失事船的庞大财富……以及一则古老的诅咒。",
             "video_image_cover": "https://emos.lol/emby/Items/vl-2660/Images/Primary",
             "video_date_air": "2011-10-24",
-            "request_count": 0,
             "media_count": 0,
+            "request_count": 0,
+            "title_alias_count": 0,
             "is_delete": false
         }
     ]
@@ -132,6 +135,52 @@
 `PATCH` `/api/video/[video_id]/recover`
 
 - `video_id` 视频ID
+
+## 获取视频别名
+
+`GET` `/api/video/[video_id]/alias/list`
+
+- `video_id` 视频ID
+
+```json
+[
+    {
+        // 别名ID 删除用到
+        "id": 4,
+        "title": "Tais-toi"
+    },
+    {
+        "id": 3,
+        "title": "你丫闭嘴"
+    },
+    {
+        "id": 1,
+        "title": "请你闭嘴"
+    }
+]
+```
+
+## 新建视频别名
+
+`POST` `/api/video/[video_id]/alias/create`
+
+- `video_id` 视频ID
+
+### 请求
+
+```json
+{
+    // 新别名内容
+    "title": "Ruby & Quentin!"
+}
+```
+
+## 删除视频别名
+
+`DELETE` `/api/video/[video_id]/alias/create?alias_id=[alias_id]`
+
+- `video_id` 视频ID
+- `alias_id` 视频别名列表中的别名ID
 
 ## 获取电视集列表
 
