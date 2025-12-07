@@ -73,6 +73,10 @@ export default defineConfig({
         link: '/proxy',
       },
       {
+        text: '工具',
+        link: '/tool',
+      },
+      {
         text: 'api',
         collapsed: true,
         items: [
