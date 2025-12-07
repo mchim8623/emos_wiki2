@@ -143,3 +143,36 @@ fetch(upload_url, {
     "message": "视频正在合并中 请等待1分钟后再保存试下"
 }
 ```
+
+## 字幕相关
+
+> 字幕无须获取详细信息 直接保存即可
+
+### 保存字幕
+
+`POST` `/api/upload/subtitle/save`
+
+#### 请求参数
+
+```json
+{
+    "media_uuid": "a785dcf1-6999-4f9f-bd1d-74979532c86f",
+    "file_id": "xWDKXEMv2E"
+}
+```
+
+- `media_uuid` 媒体资源UUID
+- `file_id` 从获取上传token获取到的
+
+#### 响应内容
+
+##### 正常
+
+```json
+{
+    // 获得的胡萝卜数量
+    "carrot": 0,
+    // 字幕ID 删除时用
+    "subtitle_id": "7lZgdJVaov"
+}
+```

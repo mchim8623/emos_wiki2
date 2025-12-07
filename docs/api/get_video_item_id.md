@@ -65,6 +65,8 @@
                                 "subtitles": [
                                     {
                                         "item_id": 5,
+                                        // 字幕ID
+                                        "subtitle_id": "7lZgdJVaov",
                                         // 字幕名称
                                         "title": "zh_cn",
                                         // 字幕类型

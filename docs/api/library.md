@@ -276,3 +276,26 @@
 - `media_uuid` 媒体资源UUID 必传
 - `item_type` 目标资源类型 必传
 - `item_id` 目标资源ID 必传
+
+## 获取视频的字幕列表
+
+`GET`
+`/api/video/subtitle/list?media_uuid=[media_uuid]`
+
+- `media_uuid` 媒体资源UUID
+
+```json
+[
+    {
+        "subtitle_id": "xWDKXEMv2E",
+        "title": "RUOppenheimer_2023_2160p_IMAX_UHDRemux_HYBRID_HDR_DV_TheEqualizer",
+        "codec": "ass"
+    }
+]
+```
+
+## 删除视频的字幕
+
+`DELETE` `/api/video/subtitle/delete?subtitle_id=[subtitle_id]`
+
+- `subtitle_id` 字幕ID
