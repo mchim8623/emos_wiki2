@@ -25,7 +25,7 @@
     - `HTML`
     - `Markdown`
     - `MarkdownV2`
-- `destroy_second` `int` 消息销毁时间(秒) 最大不可超过 `86400
+- `destroy_second` `int` 消息销毁时间(秒) 最大不可超过 `86400`
 
 测试时可以将 `to` 传为自己的 `tg id`
 
