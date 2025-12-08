@@ -177,7 +177,7 @@
 
 ## 删除视频别名
 
-`DELETE` `/api/video/[video_id]/alias/create?alias_id=[alias_id]`
+`DELETE` `/api/video/[video_id]/alias/delete?alias_id=[alias_id]`
 
 - `video_id` 视频ID
 - `alias_id` 视频别名列表中的别名ID
