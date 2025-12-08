@@ -105,6 +105,10 @@ export default defineConfig({
             link: '/api/library',
           },
           {
+            text: '点播',
+            link: '/api/seek',
+          },
+          {
             text: '插件类',
             link: '/api/plug',
           },

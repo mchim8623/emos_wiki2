@@ -88,6 +88,8 @@
             "video_date_air": "2018-01-08",
             // 资源总数 大于0则可以获取资源列表
             "media_count": 12,
+            // 点播ID
+            "seek_id": 1,
             // 点播总数
             "request_count": 1,
             // 别名总数
@@ -109,6 +111,7 @@
             "video_image_cover": "https://emos.lol/emby/Items/vl-2660/Images/Primary",
             "video_date_air": "2011-10-24",
             "media_count": 0,
+            "seek_id": 0,
             "request_count": 0,
             "title_alias_count": 0,
             "is_delete": false
@@ -184,9 +187,10 @@
 
 ## 获取电视集列表
 
-`GET` `/api/video/[video_id]/episode`
+`GET` `/api/video/[video_id]/episode?with_seek=[with_seek]`
 
 - `video_id` 视频ID
+- `with_seek` 是否包含认领信息 `0` 或 `1` 默认为 `0` 不包含
 
 `item_type` 均为 `ve`
 
@@ -206,6 +210,43 @@
         "date_air": "2018-03-28",
         // 资源总数
         "medias_count": 1
+    },
+
+    // 包含了认领信息的 有认领
+    {
+        "episode_id": 53976,
+        "episode_title": "最喜欢你了",
+        "episode_number": 1,
+        "season_id": 3810,
+        "season_title": "第 1 季",
+        "season_number": 1,
+        "date_air": "2018-03-28",
+        "medias_count": 0,
+        // 认领信息 以下字段注释在 点播 -> 查询认领信息 中
+        "seek": {
+            "seek_id": 2,
+            "status": "upload",
+            "upload_username": "1234",
+            "upload_expired_at": "2025-12-08T23:01:57.000000Z",
+            "is_can_claim": false,
+            "request_count": 1,
+            "seek_carrot": 100,
+            "updated_at": "2025-12-08T17:02:58.000000Z"
+        }
+    },
+
+    // 包含了认领信息的 无认领情况
+    {
+        "episode_id": 53976,
+        "episode_title": "最喜欢你了",
+        "episode_number": 1,
+        "season_id": 3810,
+        "season_title": "第 1 季",
+        "season_number": 1,
+        "date_air": "2018-03-28",
+        "medias_count": 0,
+        // 有资源时 seek 也会为空 此时也不可认领
+        "seek": null
     },
 ]
 ```
